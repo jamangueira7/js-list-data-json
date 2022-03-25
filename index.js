@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/detail/:id", (req, res) => {
-    var user = data.find(val => val.id == 2)
+    var user = data.find(val => val.id == req.params.id)
 
     res.render("detail", { user })
 })
